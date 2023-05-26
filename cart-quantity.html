@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart Quantity</title>
+  </head>
+  <body>
+    <p>Cart Quantity</p>
+    <button onclick="displayQuantity();">Show Quantity</button>
+    <button onclick="incrementQuantity(1)">Add to Cart</button>
+    <button onclick="incrementQuantity(2)">+2</button>
+    <button onclick="incrementQuantity(3)">+3</button>
+    <button onclick="resetQuantity()">Reset Cart</button>
+    <script>
+      let cartQuantity = 0; //camelcase used in javascript
+
+      function displayQuantity() {
+        console.log(`Cart Quantity: ${cartQuantity}`);
+      }
+
+      function incrementQuantity(num) {
+        cartQuantity += num;
+        displayQuantity();
+      }
+
+      function resetQuantity() {
+        cartQuantity = 0;
+        displayQuantity();
+      }
+    </script>
+  </body>
+</html>
